@@ -1,0 +1,82 @@
+<View id="1" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="ImageView">
+<ppt>width=-2
+height=-2
+src=%iApp/ProjectApp/com.hh128.EasyAvgEngine/apk/assets/koyomi.PNG
+ut_above=2</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="TextView">
+<ppt>width=-1
+height=100dp
+text=文本2uudjdkdjeleleksjzj
+BackgroundColor=#ff5afaff
+textSize=36sp
+ut_alignParentBottom=true</ppt>
+<event><eventItme type="clicki">s index=0
+
+//index=index+1
+s+(1,index)
+//us(2,"text",jjh[index])
+s text=0
+ug(2,"text",text)
+syso(index)
+tw(text)
+f(index==1)
+{
+  us(2,"text","akdjdg")
+}</eventItme></event>
+</View>
+<View id="3" did="1" type="Button">
+<ppt>width=-2
+height=-2
+text=返回</ppt>
+<event><eventItme type="clicki">bfms(ss.b,"sp")
+//uigo("editor.iyu")
+end()</eventItme></event>
+</View>
+<View id="6" did="1" type="ImageView">
+<ppt>width=-2
+height=-2
+src=%Download/图片/System Rush Evolution-49.jpg
+ut_above=2
+ut_centerHorizontal=true</ppt>
+<event></event>
+</View>
+<View id="7" did="1" type="Button">
+<ppt>width=-2
+height=-2
+text=save
+ut_below=3</ppt>
+<event></event>
+</View>
+<View id="8" did="1" type="Button">
+<ppt>width=-2
+height=-2
+text=load
+ut_below=7</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loadingComplete">ss bgm="%iApp/ProjectApp/com.hh128.EasyAvgEngine/apk/assets/running in the rain (feat. Sashenka).mp3"
+ss b
+bfm(ss.bgm,ss.b)
+bfms(ss.b,"sl",true)
+
+//读取配置
+fr(sss.project_path+sss.project_name+"/game_script.txt","utf-8",readed_data)
+syso(readed_data)
+//javanew 赋值 类  构造参数类型 构造参数
+fdir(sss.project_path+sss.project_name+"/game_script.txt",dir)
+syso(dir)
+javanew(file, "java.io.File","String",dir)
+javanew(file_reader,"java.io.FileReader","File",file)
+javanew(buffer,"java.io.BufferedReader","FileReader",file_reader)
+syso("java文件类"+file)
+syso(file_reader)
+syso("缓冲"+buffer)
+tw(buffer)</eventItme><eventItme type="destroy">bfms(ss.b,"sp")
+tw("消除")</eventItme></UIEventset>

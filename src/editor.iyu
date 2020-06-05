@@ -1,0 +1,75 @@
+<View id="1" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="8" did="1" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical
+ut_centerInParent=true</ppt>
+<event></event>
+</View>
+<View id="11" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=文本11</ppt>
+<event></event>
+</View>
+<View id="7" did="8" type="Button">
+<ppt>width=-2
+height=-2
+text=返回</ppt>
+<event><eventItme type="clicki">//uigo("mian.iyu")
+end()</eventItme></event>
+</View>
+<View id="6" did="8" type="Button">
+<ppt>width=-2
+height=-2
+text=运行
+ut_centerHorizontal=true</ppt>
+<event><eventItme type="clicki">uigo("run.iyu")</eventItme></event>
+</View>
+<View id="9" did="8" type="Button">
+<ppt>width=-2
+height=-2
+text=打开代码编辑器(请使用外部编辑器)</ppt>
+<event><eventItme type="clicki">tw("请使用droid edit来编辑")
+uapp("com.aor.droidedit.pro","com.aor.droidedit.DroidEditProActivity",c)
+tw("状态"+c)
+f(c==true)
+{
+  tw("成功")
+}
+else
+{
+  tw("错误,请安装droidedit")
+  tws(null,"请安装droidEdit!",0)
+}
+
+//uapp("com.aor.droidedit.pro",c)
+//syso(c)
+//tw(c)</eventItme></event>
+</View>
+<View id="10" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=暂时没做文件编辑功能 需要打开代码编辑器</ppt>
+<event></event>
+</View>
+<View id="12" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=脚本路径
+textIsSelectable=true</ppt>
+<event></event>
+</View>
+<View id="5" did="0" type="ImageView">
+<ppt>width=-2
+height=-2
+src=17301567</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loadingComplete">fr(sss.project_path+sss.project_name+"/game_script.txt","utf-8",c)
+us(11,"text",c)
+us(12,"text","脚本路径"+sss.project_path+sss.project_name)</eventItme></UIEventset>

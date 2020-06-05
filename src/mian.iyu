@@ -1,0 +1,160 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=42dp
+orientation=vertical
+backgroundcolor=#50c4e5
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=EasyAvgEngine
+textsize=16sp
+textcolor=#ffffff
+layout_marginleft=10dp</ppt>
+<event></event>
+</View>
+<View id="7" did="0" type="EditText">
+<ppt>width=-2
+height=-2
+text=
+hint=工程名称</ppt>
+<event><eventItme type="ontextchanged">
+sss project_name
+
+ug(7,"text",sss.project_name)
+tw(sss.project_name)
+syso("实时工程名字"+sss.project_name)</eventItme></event>
+</View>
+<View id="4" did="0" type="Button">
+<ppt>width=-2
+height=-2
+text=新建工程</ppt>
+<event><eventItme type="clicki">s c=""
+ug(7,"text",c)
+//c是工程名字 和目录名称
+tw(c)
+syso(c)
+//根目录
+fdir(sss.project_path+sss.project_name+"/game_script.txt",n)
+syso(n)
+fw(sss.project_path+sss.project_name+"/game_script.txt","[dialog]\n name= \n [bgm]")
+uigo("editor.iyu")
+
+</eventItme></event>
+</View>
+<View id="5" did="0" type="Button">
+<ppt>width=-2
+height=-2
+text=加载工程</ppt>
+<event><eventItme type="clicki">
+//提示获得当前脚本内容
+
+//syso(ss.project_name)
+//syso(ss.project_path+ss.project_
+
+fr(sss.project_path+sss.project_name+"/game_script.txt",mmt)
+endkeyboard()
+syso("读取内容"+mmt)
+tw(mmt)
+f(mmt==null)
+{
+  tws(null,"错误",0)
+}
+else
+{
+  tws(null,"正确",0)
+  uigo("editor.iyu")
+}
+</eventItme></event>
+</View>
+<View id="9" did="0" type="TextView">
+<ppt>width=-2
+height=-2
+text=所有资源用明文显示 输入文件名然后选择操作 不支持导出apk 开发人员:128hh 核心技术:iapp iyu语言</ppt>
+<event></event>
+</View>
+<View id="10" did="0" type="Button">
+<ppt>width=-2
+height=-2
+text=运行</ppt>
+<event></event>
+</View>
+<View id="11" did="0" type="Button">
+<ppt>width=-2
+height=-2
+text=退出
+</ppt>
+<event><eventItme type="clicki">end()
+</eventItme></event>
+</View>
+<View id="12" did="0" type="Button">
+<ppt>width=-2
+height=-2
+text=帮助</ppt>
+<event><eventItme type="clicki">uigo("api.iyu")</eventItme></event>
+</View>
+<View id="13" did="0" type="ScrollView">
+<ppt>width=-1
+height=-1
+BackgroundColor=#ffff002e</ppt>
+<event></event>
+</View>
+<View id="19" did="13" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="20" did="19" type="TextView">
+<ppt>width=-2
+height=-2
+text=已存在的项目 请输入对应名称来加载
+BackgroundColor=#ffb9eaff</ppt>
+<event></event>
+</View>
+<View id="21" did="19" type="Button">
+<ppt>width=-2
+height=-2
+text=手动刷新页面</ppt>
+<event><eventItme type="clicki">s a = "%Android/EasyAvgEngine"
+fl(a, b)
+syso(b)
+s c
+s ccc
+s numbers=0
+
+for(c; b)
+{
+	syso("所有文件"+c)
+    s+(1,numbers)
+  
+    nvw(1,19,"按钮","width=-2\nheight=-2\n ",m)
+    us(m,"text",c)
+    
+   
+}
+
+</eventItme></event>
+</View>
+<UIEventset><eventItme type="loading">
+sss project_path="%Android/EasyAvgEngine/"
+//绝对路径
+syso("工程路径"+sss.project_path)</eventItme><eventItme type="loadingComplete">s a = "%Android/EasyAvgEngine"
+fl(a, b)
+syso(b)
+s ccc
+s numbers=0
+for(c; b)
+{
+	syso("所有文件"+c)
+    s+(1,numbers)
+  
+    nvw(1,19,"按钮","width=-2\nheight=-2\n ",m)
+    us(m,"text",c)
+    
+   
+}
+
+</eventItme></UIEventset>

@@ -1,0 +1,33 @@
+//使用aaa
+
+//[dialog] 用来标记对话
+//[dialog] 
+//名字
+//name=aaa
+//内容
+//text=我的好姐姐 
+//onclick是播放音乐的回调
+//onclick=play_bgm(bgm1) bgm1是自定义文件名变量
+
+
+//[bgm] 标记背景音乐
+//bgm1=xxx xxx是文件路径
+
+
+//[button]
+//text=开始游戏
+//on_click=print("1本") 打印消息
+
+//[function] 自定义方法
+//function a():
+      //默默
+      //pass 方法结束
+      
+    //保存 读取
+    
+    //根据dialog编号来读取 
+    //从上往下 1 2 3 4
+    
+    //load("abx") 加载存档
+    //save("axz") 保存 文件名 日期 dialog数字id
+    
