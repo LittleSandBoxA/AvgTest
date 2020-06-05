@@ -1,0 +1,10 @@
+<View id="1" did="0" type="TextView">
+<ppt>width=-2
+height=-2
+text=fudidodos</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loadingComplete">s a="[dialog] 用来标记对话\n[dialog]\n 名字\n name=aaa \n内容\n text=我的好姐姐 \n onclick是播放音乐的回调 \nonclick=play_bgm(bgm1)\n bgm1是自定义文件名变量\n[bgm] \n标记背景音乐bgm1=xxx \nxxx是文件路径\n[button]\ntext=开始游戏 \non_click=print("1本") \n打印消息\n[function] \n自定义方法 \nfunction a(): \n默默 \npass \n方法结束保存 \n读取根据dialog编号来读取从上往下 1 2 3 4\nload("abx") 加载存档 \n  save("axz") \n保存文件名 日期 dialog数字id"
+  
+ // tw(a)
+    us(1,"text",a)</eventItme></UIEventset>
