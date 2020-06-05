@@ -1,0 +1,26 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+public  static void my_new_buffer(String path) throws FileNotFoundException
+{
+  syso("成功调用java");
+  syso("传入的数据"+path);
+  FileReader ddd= new FileReader(path);
+  tw(ddd);
+  syso("读取文件器"+ddd);
+  BufferedReader aaa=new BufferedReader(ddd);
+  syso(aaa);
+  int mylines=0;
+  //String pre_line=aaa.readLine();
+  while((pre_line=aaa.readLine())!=null)
+  {
+    syso(pre_line);
+    //在这里解析
+    
+   // syso(aaa.readLine());
+    mylines++;
+    
+  }
+  syso("行数"+mylines);
+}

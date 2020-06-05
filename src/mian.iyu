@@ -141,7 +141,8 @@ for(c; b)
 <UIEventset><eventItme type="loading">
 sss project_path="%Android/EasyAvgEngine/"
 //绝对路径
-syso("工程路径"+sss.project_path)</eventItme><eventItme type="loadingComplete">s a = "%Android/EasyAvgEngine"
+syso("工程路径"+sss.project_path)
+</eventItme><eventItme type="loadingComplete">s a = "%Android/EasyAvgEngine"
 fl(a, b)
 syso(b)
 s ccc

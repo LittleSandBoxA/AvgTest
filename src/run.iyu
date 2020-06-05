@@ -74,9 +74,14 @@ fdir(sss.project_path+sss.project_name+"/game_script.txt",dir)
 syso(dir)
 javanew(file, "java.io.File","String",dir)
 javanew(file_reader,"java.io.FileReader","File",file)
-javanew(buffer,"java.io.BufferedReader","FileReader",file_reader)
+//javanew(buffer,"java.io.BufferedReader","FileReader",file_reader)
 syso("java文件类"+file)
-syso(file_reader)
-syso("缓冲"+buffer)
-tw(buffer)</eventItme><eventItme type="destroy">bfms(ss.b,"sp")
+call(a,"mjava","bu.my_new_buffer",dir)
+ftz("读取解析中请稍候", "读取中", "解析中", null)
+{
+tw("点击了")
+}
+tws(null,"解析中请稍候",0)
+syso("iyu调用java返回的"+a)
+</eventItme><eventItme type="destroy">bfms(ss.b,"sp")
 tw("消除")</eventItme></UIEventset>
