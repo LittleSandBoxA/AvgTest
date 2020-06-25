@@ -63,15 +63,15 @@ ut_below=7</ppt>
 </View>
 <UIEventset><eventItme type="loadingComplete">ss bgm="%iApp/ProjectApp/com.hh128.EasyAvgEngine/apk/assets/running in the rain (feat. Sashenka).mp3"
 ss b
-bfm(ss.bgm,ss.b)
-bfms(ss.b,"sl",true)
+//bfm(ss.bgm,ss.b)
+//bfms(ss.b,"sl",true)
 
 //读取配置
 fr(sss.project_path+sss.project_name+"/game_script.txt","utf-8",readed_data)
-syso(readed_data)
+//syso(readed_data)
 //javanew 赋值 类  构造参数类型 构造参数
 fdir(sss.project_path+sss.project_name+"/game_script.txt",dir)
-syso(dir)
+//syso(dir)
 javanew(file, "java.io.File","String",dir)
 javanew(file_reader,"java.io.FileReader","File",file)
 //javanew(buffer,"java.io.BufferedReader","FileReader",file_reader)

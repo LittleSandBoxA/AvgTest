@@ -56,7 +56,7 @@ text=加载工程</ppt>
 
 fr(sss.project_path+sss.project_name+"/game_script.txt",mmt)
 endkeyboard()
-syso("读取内容"+mmt)
+syso("读取工程信息"+mmt)
 tw(mmt)
 f(mmt==null)
 {
@@ -141,7 +141,7 @@ for(c; b)
 <UIEventset><eventItme type="loading">
 sss project_path="%Android/EasyAvgEngine/"
 //绝对路径
-syso("工程路径"+sss.project_path)
+//syso("工程路径"+sss.project_path)
 </eventItme><eventItme type="loadingComplete">s a = "%Android/EasyAvgEngine"
 fl(a, b)
 syso(b)
@@ -149,7 +149,7 @@ s ccc
 s numbers=0
 for(c; b)
 {
-	syso("所有文件"+c)
+//	syso("所有文件"+c)
     s+(1,numbers)
   
     nvw(1,19,"按钮","width=-2\nheight=-2\n ",m)

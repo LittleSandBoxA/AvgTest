@@ -2,25 +2,57 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
-public  static void my_new_buffer(String path) throws FileNotFoundException
+import java.util.*;
+public   void my_new_buffer(String path) throws FileNotFoundException
 {
   syso("成功调用java");
-  syso("传入的数据"+path);
+ ArrayList mmd=new ArrayList();
+  syso("ArrayList"+scriptBuffer);
+//  syso("传入的数据"+path);
   FileReader ddd= new FileReader(path);
-  tw(ddd);
+ // tw(ddd);
   syso("读取文件器"+ddd);
   BufferedReader aaa=new BufferedReader(ddd);
-  syso(aaa);
+ // syso(aaa);
   int mylines=0;
-  //String pre_line=aaa.readLine();
+  String pre_line;
   while((pre_line=aaa.readLine())!=null)
   {
-    syso(pre_line);
     //在这里解析
-    
+    //flag为[
+  int has_flag=pre_line.indexOf("[");
+  if(has_flag>-1)
+  {
+    String[] tmp=pre_line.split("]");
+    syso(tmp[0]);
+    tmp=tmp[0].split("\\[");
+    syso(tmp[1]);
+    if(tmp[1]=="dialog")
+    {
+    boolean result= mmd.add(tmp[1]);
+   //  tw(result);
+     syso(result);
+      }
+   
+    }
+    else
+    {
+      syso(pre_line);
+     String[] tmp= pre_line.split("=");
+     syso(tmp[1]);
+     if(tmp[0]=="name")
+     {
+       syso("数组");
+       mmd.add(tmp[1]);
+       syso(scriptBuffer);
+       }
+    }
+    //syso(has_flag);
+  
    // syso(aaa.readLine());
     mylines++;
     
   }
   syso("行数"+mylines);
+  syso("arraylist"+scriptBuffer);
 }
